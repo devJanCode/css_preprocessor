@@ -1,0 +1,75 @@
+@import "./rings.css";
+
+@font-face {
+	font-family: "Aniron";
+	src: url("fonts/anicb.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Party Business";
+	src: url("fonts/partybusiness.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Tengwar Annatar";
+	src: url("fonts/tnganbi.ttf") format("truetype");
+}
+
+body {
+	background-image: url(img/bg_light.png);
+	font-family: "Aniron";
+	width: 100%;
+}
+
+/* navbar */
+
+nav.orange {
+	background-color: orangered;
+}
+
+div#navbarSupportedContent ul {
+	padding-bottom: 0;
+}
+
+nav ul.navbar-nav {
+	position: relative;
+	top: -5px;
+}
+
+li.active a {
+	border-bottom: 4px solid white;
+	padding-bottom: 0;
+}
+
+li.nav-item a.nav-link {
+	color: white !important;
+}
+
+/* footer */
+
+footer {
+	background-color: orangered;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	/*height: 100px;*/
+	padding: 5em;
+}
+
+footer ul {
+	list-style-type: none;
+}
+
+footer ul li a {
+	color: white;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+}
+
+footer ul li a:hover {
+	border: 1px black solid;
+	background-color: white;
+	text-decoration: none;
+	color: black;
+}

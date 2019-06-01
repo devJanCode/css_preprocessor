@@ -1,0 +1,42 @@
+.main-title, .find, .six-rings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.main-content>h2 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+@mixin ring($size, $color) {
+  margin: 1em;
+  $thickness: round($size/13.25);
+  $shadow-color: darken($color, 10%);
+  $offset: ceil($size/100);
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  border: $thickness solid $color;
+  background: transparent;
+  box-shadow: inset $offset $offset $offset $shadow-color, 
+  $offset $offset $offset $shadow-color;
+}
+
+.orange-ring {
+  @include ring(60px, $color: orangered);
+}
+
+.golden-ring {
+  @include ring(212px, $color: gold);
+}
+
+$dark-ring-size: 35px;
+@for $i from 1 through 6 {
+  .dark-ring#{$i} {
+    $size: $dark-ring-size + $i*10;
+    @include ring($size, #333);
+    margin-left: -1*($size - ceil($size/2.5));
+  }
+}
