@@ -32,10 +32,9 @@
   @include ring(212px, gold);
 }
 
-$dark-ring-size: 35px;
 @for $i from 1 through 6 {
   .dark-ring#{$i} {
-    $size: $dark-ring-size + $i*10;
+    $size: 35px + $i*10; // 35px taille du premier anneau
     @include ring($size, #333);
     margin-left: -1*($size - ceil($size/2.5));
   }
