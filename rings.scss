@@ -25,11 +25,11 @@
 }
 
 .orange-ring {
-  @include ring(60px, $color: orangered);
+  @include ring(60px, orangered);
 }
 
 .golden-ring {
-  @include ring(212px, $color: gold);
+  @include ring(212px, gold);
 }
 
 $dark-ring-size: 35px;
